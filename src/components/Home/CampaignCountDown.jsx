@@ -33,7 +33,7 @@ export default function CampaignCountDown({ className, datas, products = [] }) {
     });
   return (
     <div>
-      <div className={`w-full ${className || ""}`}>
+      {/* <div className={`w-full ${className || ""}`}>
         <div
           data-aos="fade-right"
           className="campaign-countdown w-full h-full rounded relative bg-red-500 md:py-[60px] py-[30px]"
@@ -175,7 +175,7 @@ export default function CampaignCountDown({ className, datas, products = [] }) {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

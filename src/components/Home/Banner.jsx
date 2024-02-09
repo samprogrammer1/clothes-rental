@@ -24,7 +24,7 @@ export default function Banner({ className, sliders = [] }) {
       <div className={`w-full xl:h-[733px] h-[500px] ${className || ""}`}>
         <div className="main-wrapper w-full h-full">
           {/*    slider area*/}
-          <div className="hero-slider-wrapper xl:h-full mb-20 xl:mb-0  w-full relative">
+          {/* <div className="hero-slider-wrapper xl:h-full mb-20 xl:mb-0  w-full relative">
             <SimpleSlider settings={settings} selector={sliderRef}>
               {sliders.length > 0 &&
                 sliders.map((item, i) => (
@@ -70,7 +70,7 @@ export default function Banner({ className, sliders = [] }) {
                   </div>
                 ))}
             </SimpleSlider>
-          </div>
+          </div> */}
         </div>
       </div>
     </>
