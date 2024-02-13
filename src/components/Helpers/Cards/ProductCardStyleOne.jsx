@@ -267,7 +267,7 @@ export default function ProductCardStyleOne({ datas }) {
       <div className="flex flex-col h-full justify-between">
         <div>
           <div className="product-card-img w-full h-[313px]">
-            <div className="w-full h-full relative  flex justify-center items-center transition-all duration-700 ease-in-out transform group-hover:-scale-x-[1] scale-x-100">
+            <div className="w-full h-full relative  flex justify-center items-center transition-all duration-700 ease-in-out transform  scale-x-100">
               <Image
                 layout="fill"
                 objectFit="scale-down"

@@ -16,6 +16,7 @@ import Selectbox from "../Helpers/Selectbox";
 import CheckProductIsExistsInFlashSale from "../Shared/CheckProductIsExistsInFlashSale";
 import languageModel from "../../../utils/languageModel";
 import LoginContext from "../Contexts/LoginContexts";
+import DatePickerComponent from "../DatePicker";
 const Redirect = ({ message, linkTxt }) => {
   return (
     <div className="flex space-x-2 items-center">
@@ -56,7 +57,7 @@ export default function ProductView({
   const [offerPrice, setOffer] = useState(null);
   const [src, setSrc] = useState(product.thumb_image);
   useEffect(() => {
-   setSrc(product.thumb_image)
+    setSrc(product.thumb_image);
   }, [product]);
 
   const changeImgHandler = (current) => {
@@ -462,7 +463,57 @@ export default function ProductView({
               </button>
             </div>
             <div className="w-full h-[1px] bg-qpurplelow/10 mb-[30px]"></div>
-            <div className="p-3 bg-qpurplelow/10 flex items-center space-x-2 mb-[30px] rounded-lg w-fit">
+            <div className="dress-size my-4 flex gap-5">
+              <div className=" w-[60px] h-full flex justify-center items-center border border-qpurplelow/10 rounded-md">
+                <button type="button" onClick={() => addToWishlist(product.id)}>
+                  <span className="w-10 h-10 flex justify-center items-center">
+                    S
+                  </span>
+                </button>
+              </div>
+              <div className=" w-[60px] h-full flex justify-center items-center border border-qpurplelow/10 rounded-md">
+                <button type="button" onClick={() => addToWishlist(product.id)}>
+                  <span className="w-10 h-10 flex justify-center items-center">
+                    M
+                  </span>
+                </button>
+              </div>
+              <div className=" w-[60px] h-full flex justify-center items-center border border-qpurplelow/10 rounded-md">
+                <button type="button" onClick={() => addToWishlist(product.id)}>
+                  <span className="w-10 h-10 flex justify-center items-center">
+                    L
+                  </span>
+                </button>
+              </div>
+              <div className=" w-[60px] h-full flex justify-center items-center border border-qpurplelow/10 rounded-md">
+                <button type="button" onClick={() => addToWishlist(product.id)}>
+                  <span className="w-10 h-10 flex justify-center items-center">
+                    XL
+                  </span>
+                </button>
+              </div>
+              <div className=" w-[60px] h-full flex justify-center items-center border border-qpurplelow/10 rounded-md">
+                <button type="button" onClick={() => addToWishlist(product.id)}>
+                  <span className="w-10 h-10 flex justify-center items-center">
+                    XXL
+                  </span>
+                </button>
+              </div>
+
+              <div className=" w-[60px] h-full flex justify-center items-center border border-qpurplelow/10 rounded-md">
+                <button type="button" onClick={() => addToWishlist(product.id)}>
+                  <span className="w-10 h-10 flex justify-center items-center">
+                    XXXL
+                  </span>
+                </button>
+              </div>
+            </div>
+            <div className="select-date my-10">
+              <h1 className="pb-2">Select Date</h1>
+
+              <DatePickerComponent />
+            </div>
+            {/* <div className="p-3 bg-qpurplelow/10 flex items-center space-x-2 mb-[30px] rounded-lg w-fit">
               <span className="text-base font-bold text-qblack">
                 {langCntnt && langCntnt.Availability} :
               </span>
@@ -473,7 +524,7 @@ export default function ProductView({
                     } `
                   : `${langCntnt && langCntnt.Products_not_Available}`}
               </span>
-            </div>
+            </div> */}
             {varients.length > 0 &&
               varients.map((item) => (
                 <div
